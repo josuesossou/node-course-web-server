@@ -47,6 +47,11 @@ app.get('/about', (req, res)=>{
 app.get('/bad', (req, res)=>{
     res.send('this is bad')
 });
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+        pageTitle:"My Awesome Projects"
+    })
+})
 
 app.listen(port, ()=>{
     console.log(`server up and running ${port}`)
